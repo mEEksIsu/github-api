@@ -7,7 +7,7 @@
   </parent>
 
   <artifactId>github-api</artifactId>
-  <version>1.93-SNAPSHOT</version>
+  <version>1.93-TREND</version>
   <name>GitHub API for Java</name>
   <url>http://github-api.kohsuke.org/</url>
   <description>GitHub API for Java</description>
@@ -24,6 +24,10 @@
       <id>github-pages</id>
       <url>gitsite:git@github.com/kohsuke/${project.artifactId}.git</url>
     </site>
+    <repository>
+      <id>nexus</id>
+      <url>https://dsnexus.trendmicro.com:8443/nexus/repository/thirdparty/</url>
+    </repository>
   </distributionManagement>
 
   <properties>
@@ -36,9 +40,6 @@
     <plugins>
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
-        <configuration>
-          <rerunFailingTestsCount>2</rerunFailingTestsCount>
-        </configuration>
       </plugin>
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
